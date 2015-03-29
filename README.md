@@ -1,2 +1,0 @@
-# SmileNow
-Stomatološka ordinacija SmileNOW
