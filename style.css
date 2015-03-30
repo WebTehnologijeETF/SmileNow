@@ -1,0 +1,123 @@
+body {
+    background: url("images/bgimg1.png") repeat-y top center;
+	margin-left: 7%;
+	margin-right: 7%;
+}
+h3{
+	font-style: italic;
+	text-align:center;
+}
+
+#header {
+    background: url("images/bgimg2.png") no-repeat center;
+    color:white;
+    text-align:center;
+    padding-bottom:2%;
+    border-radius: 10px 10px 0 0;
+}	
+#podnaslov{
+border-bottom-style:solid;
+}
+
+#nav {
+	text-align: center;
+	position: relative;
+}
+#nav ul li{
+	display: inline;
+}	
+#nav ul a{
+	text-decoration: none;
+	background-color: blue;
+	color: white;
+	padding: 1% 5% 1% 5%;
+	border-radius: 0 0 10px 10px;
+}
+#nav ul a:hover {
+    background-color: orange;
+}
+#section {
+    width:75%;
+    padding-left:5px;
+	padding-right:5px;
+	float:left;
+}
+#aside {
+	background-color: #00BFFF;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;
+	margin-bottom:5px;
+	margin-top:5px;
+	text-align:left;
+}
+#aside ul{
+text-align:left;
+clear:both;
+}
+#osnovano{
+text-align: justify;
+}
+#objave {
+	clear: both;
+	overflow: auto;
+}
+
+.objava img {
+	width: 150px;
+	height: 150px;
+	padding-right: 10px;
+	border-bottom: 100px;
+	float: left;
+}
+
+.date {
+	color: blue;
+	float: left;
+	font-style: italic;
+	padding-left: 10px;
+}
+.welcome{
+text-align: center;
+}
+.objavio{
+	float: left;
+}
+.text_objave{
+text-align: justify;
+}
+table#tabc tr:nth-child(even) {
+	padding:2px;
+	text-align: center;
+}
+table#tabc tr:nth-child(odd) {
+   padding: 2px;
+   text-align: center;
+}
+table#tabc th	{
+    background-color: blue;
+	padding: 2px;
+	text-align: center;
+}
+table#tabc {
+ margin-left:auto; 
+    margin-right:auto;
+	padding: 10px;
+}
+#footer {
+    background-color:blue;
+    color:white;
+    text-align:center;
+	padding:1px;
+	border-radius: 0 0 10px 10px;
+	clear:both;
+	text-align: center;
+	width: auto;
+}
+	
+	
+	
+	
+	
+	
