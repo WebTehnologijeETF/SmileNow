@@ -1,5 +1,5 @@
 body {
-    background: url("images/bgimg1.png") repeat-y top center;
+    background: url("bgimg1.png") repeat-y top center;
 	margin-left: 7%;
 	margin-right: 7%;
 }
@@ -9,7 +9,7 @@ h3{
 }
 
 #header {
-    background: url("images/bgimg2.png") no-repeat center;
+    background: url("bgimg2.png") no-repeat center;
     color:white;
     text-align:center;
     padding-bottom:2%;
