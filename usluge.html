@@ -28,6 +28,30 @@
 			je potrebno prethodno zakazivanje termina za iste.</h4>
 			</div>
 			
+			<!--Dodavanje elemenata u stablo je moguce bez promjene javascript koda, nivo hijerarhije nije ogranicen, samo je 
+			potrebno promjeniti css ukoliko bi stablo bilo veliko.  Prilikom dodavanja novog elementa, id treba pisati u obliku p_x_y 
+			sto znaci x nivo hijerarhije, y redni broj u nivou hijerarhije, i class je obavezan za css. 
+			Ispod u kodu su neki primjeri zakomentarisani-->
+			<!--      <div id="p_3_6" class="treci">3.Nova protetika</div>    primjer 1-->
+			<!--      <div id="p_3_7" class="treci">1.Novi savjet</div>       primjer 2-->
+			
+			<div id="asideStablo">
+				<div id="p_0_1" class="nulti">+Odaberi uslugu</div>
+					<div id="p_1_1" class="prvi">+Usluge koje se naplaćuju</div>
+						<div id="p_2_1" class="drugi">+Vađenje zuba</div>
+							<div id="p_3_1" class="treci">1.Sa anestezijom</div>
+							<div id="p_3_2" class="treci">2.Bez anestezije</div>
+							<div id="p_3_3" class="treci">3.Liječenje zuba</div>
+						<div id="p_2_2" class="drugi">+Protetika</div>
+							<div id="p_3_4" class="treci">1.Fiksna</div>
+							<div id="p_3_5" class="treci">2.Mobilna</div>
+						    <div id="p_3_6" class="treci">3.Nova protetika</div><!-- Primjer 1 (+1 duzina liste)-->
+					<div id="p_1_2" class="prvi">+Besplatne usluge</div>
+						<div id="p_2_3" class="drugi">1.Pregled</div>
+						<div id="p_2_4" class="drugi">+Stručno davanje savjeta</div>
+							<div id="p_3_7" class="treci">1.Novi savjet</div><!-- Primjer 2 (+1 nivo hijerarhije)-->
+			</div>
+			
 			<table id="tabc">
 			  <tr>
 				<th>Usluga</th>
@@ -61,12 +85,21 @@
 			  </tr>
 			</table>
 			
+			<div id="sadrzajU">
+			<div id="p_3_1s" class="skriveno">Vađenje zuba sa anestezijom<br>Sada ovdje neki tekst...</div>
+			<div id="p_3_2s" class="skriveno">Vađenje zuba bez anestezijom<br>Sada ovdje neki tekst...</div>
+			<div id="p_3_3s" class="skriveno">Liječenje zuba<br>Sada ovdje neki tekst...</div>
+			<div id="p_3_4s" class="skriveno">Fiksna protetika<br>Sada ovdje neki tekst...</div>
+			<div id="p_3_5s" class="skriveno">Mobilna protetika<br>Sada ovdje neki tekst...</div>
+			
+			<div id="nemaSadrzaja" class="skriveno">Za ovu kategoriju nema sadrzaja...</div><!-- ovaj tag ostavljati posljednji -->
+			</div>
 			
 			<div id="footer">
 				<p>Copyright © 2015 SmileNow Sarajevo<br>
 				Sva prava zadržana</p>
 			</div>
-		
+	<SCRIPT src="kodStablo.js"></SCRIPT>	
 	</body>
 	
 </html>

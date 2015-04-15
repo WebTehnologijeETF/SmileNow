@@ -24,19 +24,82 @@
 			</div>
 			<hr>
 			<form>
-			Ime:<br>
-			<input type="text" name="firstname" value="">
+			
+			<h4 class="poravnato">Preko ove forme nam se možete obratiti, ukoliko vam je potrebna neka naša
+			usluga ili nam želite postaviti neko pitanje. Neka polja su opcionalna 
+			(neobavezna), a neka su obavezna. Ukoliko nas ocjenite sa ocjenom
+			"Loša", molimo vas da nam u poruci navedete zašto, ako imate vremena. Svi
+			prijedlozi, kritike i pohvale su dobrodošli. Mi smo tu zbog vas!</h4>
+			
+			Ime:(opcionalno)<br>
+			<div id="erName1">
+			<input id="firstname" type="text" name="firstname" value="">
+			</div>
+			<div id="erName2">
+			<img class="errorImage" src="error.png" alt="Error:">
+			<span id="mErrorN"></span>
+			</div>
 			<br>
-			Prezime:<br>
-			<input type="text" name="firstname" value="">
+			Prezime:(opcionalno)<br>
+			<div id="erLast1">
+			<input id="lastname" type="text" name="lastname" value="">
+			</div>
+			<div id="erLast2">
+			<img class="errorImage" src="error.png" alt="Error:">
+			<span id="mErrorL"></span>
+			</div>
 			<br>
 			Vas e-mail:<br>
-			<input type="text" name="email" value="">
+			<div id="erEmail1">
+			<input id="email" type="text" name="email" value="">
+			</div>
+			<div id="erEmail2">
+			<img class="errorImage" src="error.png" alt="Error:">
+			<span id="mErrorE"></span>
+			</div>
+			<br>
+			Da li ste prije bili kod nas:<br>
+			<div id="erOcjena1">
+			<select id="daNeID">
+			<option value="">-------</option>
+            <option value="da">DA</option>
+            <option value="ne">NE</option>
+            </select>
+			<span>Ocjena:</span>
+			<span>
+				<select id="ocjena">
+				<option value="">-----------</option>
+				<option value="o1">Loša</option>
+				<option value="o3">Dobra</option>
+				<option value="o5">Odlična</option>
+				</select>
+			</span>
+			</div>
+			<div id="erOcjena2">
+			<img class="errorImage" src="error.png" alt="Error:"> 
+			<span id="mErrorO"></span>
+			</div>
+			<br>
+			Telefon:(opcionalno)<br>
+			<div id="erTelefon1">
+			<input id="telefon" type="text" name="telefon" value="">
+			</div>
+			<div id="erTelefon2">
+			<img class="errorImage" src="error.png" alt="Error:"> 
+			<span id="mErrorT"></span>
+			</div>
 			<br>
 			Vasa poruka:<br>
-			<textarea rows="4" cols="50"></textarea>
+			<div id="erPoruka1">
+			<textarea id="poruka" rows="4" cols="50"></textarea>
+			</div>
+			<div id="erPoruka2">
+			<img class="errorImage" src="error.png" alt="Error:"> 
+			<span id="mErrorP"></span><br><br>
+			</div>
+			
 			<br><br>
-			<input type="button" value="Pošalji!">
+			<input id="buttonPos" type="button" value="Pošalji!">
 			</form><br>
 			
 			
@@ -44,7 +107,8 @@
 				<p>Copyright © 2015 SmileNow Sarajevo<br>
 				Sva prava zadržana</p>
 			</div>
-		
+			
+	<SCRIPT src="kod.js"></SCRIPT>	
 	</body>
 	
 </html>
