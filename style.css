@@ -126,9 +126,12 @@ padding-right:3px;
 #erPoruka2{
 margin-top:31px;
 }
-#erName2, #erLast2, #erPoruka2, #erEmail2, #erTelefon2, #erOcjena2{
+#erName2, #erLast2, #erPoruka2, #erEmail2, #erTelefon2, #erOcjena2, #erMjesto, #erOpcina{
 color:red;
 display:none;
+}
+#opcinaID, #mjestoID{
+float:left;
 }
 .poravnato{
 text-align: justify;

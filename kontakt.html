@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>SmileNOW</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	
-	<body>
-		
-			<div id="header">
-				<h1>SmileNoW!</h1>
-				<h3 id="podnaslov">Prepustite brigu o Vašem osmijehu nama.</h3>
-			</div>
-			
-			<div id="nav">
-				<ul id="menu">
-					<li><a href="index.html" title="Naslovna strana">Pocetna</a></li>
-					<li><a href="usluge.html"  title="Usluge koje pružamo">Usluge</a></li>
-					<li><a href="onama.html"  title="Informacije o nama">O nama</a></li>
-					<li><a href="kontakt.html"  title="Kako do nas">Kontakt</a></li>
-				</ul> 
-			</div>
-			<hr>
 			<form>
 			
 			<h4 class="poravnato">Preko ove forme nam se možete obratiti, ukoliko vam je potrebna neka naša
@@ -49,6 +24,29 @@
 			<span id="mErrorL"></span>
 			</div>
 			<br>
+
+			<!-- Sljedeca dva polja (opcina i mjesto) su dodana za validaciju putem servisa (http://zamger.etf.unsa.ba/wt/mjesto_opcina.php) -->
+
+			Općina:<br>
+			<div id="opcinaID">
+			<input id="opcina" type="text" name="opcina" value="">
+			</div>
+			<div id="erOpcina">
+			<img class="errorImage" src="error.png" alt="Error:">
+			<span id="opcinaError"></span>
+			</div>
+			<br><br>
+
+			Mjesto:<br>
+			<div id="mjestoID">
+			<input id="mjesto" type="text" name="mjesto" value="">
+			</div>
+			<div id="erMjesto">
+			<img class="errorImage" src="error.png" alt="Error:">
+			<span id="mjestoError"></span>
+			</div>
+			<br><br>
+
 			Vas e-mail:<br>
 			<div id="erEmail1">
 			<input id="email" type="text" name="email" value="">
@@ -102,13 +100,4 @@
 			<input id="buttonPos" type="button" value="Pošalji!">
 			</form><br>
 			
-			
-			<div id="footer">
-				<p>Copyright © 2015 SmileNow Sarajevo<br>
-				Sva prava zadržana</p>
-			</div>
-			
-	<SCRIPT src="kod.js"></SCRIPT>	
-	</body>
-	
-</html>
+			<script src="kod.js"></script>

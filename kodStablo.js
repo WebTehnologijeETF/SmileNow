@@ -1,11 +1,11 @@
 var idS = [];//globalni niz koji cuva id-ove div-ova listeStabla
 var idSadrzaj = [];//globalni niz koji cuva id-ove div-ova sadrzaja stabla
 var prosliSadrzaj = "";
-window.onload = function () {
-	ocitajStablo();
-	ocitajSadrzajStabla();
-	postaviNaL();
-}
+
+ocitajStablo();
+ocitajSadrzajStabla();
+postaviNaL();
+
 function ocitajSadrzajStabla(){
 	var sadrzaj = document.getElementById("sadrzajU").innerHTML;
 	var pomNiz = sadrzaj.split('"');
