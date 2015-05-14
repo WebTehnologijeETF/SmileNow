@@ -1,4 +1,5 @@
-var ime, prezime, telefon, email, ocjena, porukaF, stariKorisnik, buttonPos;
+var ime, prezime, telefon, email, ocjena, porukaF, stariKorisnik, buttonPos, opstina, mjesto;
+var svaPoljaOsimMjestaIOpstineUredu;
 
 document.getElementById("buttonPos").addEventListener( "click", validirajFormu, false);
 
@@ -11,6 +12,8 @@ function ocitajFormu()
 	email = document.getElementById("email").value;
 	ocjena = document.getElementById("ocjena").value;
 	stariKorisnik = document.getElementById("daNeID").value;
+	opstina =  document.getElementById("opcina").value;
+	mjesto =  document.getElementById("mjesto").value;
 }
 function validirajFormu(){
 	ocitajFormu();
@@ -21,9 +24,14 @@ function validirajFormu(){
 	var u4 = provjeriTelefon(); 
 	var u5 = provjeriEmail(); 
 	var u6 = provjeriOcjenu();
+	
 	// ne znam zasto nisam mogao staviti funkcije umjesto varijabli direktno u if-u
 	if(u1 && u2 && u3 && u4 && u5 && u6)
-		alert('Uspješno ste poslali poruku!');
+		svaPoljaOsimMjestaIOpstineUredu = 1;
+	else 
+		svaPoljaOsimMjestaIOpstineUredu = 0;
+	
+	provjeraSaServisom();
 }
 //ovo je jako povrsna validacija (u odnosu kako bi trebalo), nadam se da je ovo dovoljno...
 function ispravanMail(mail)
@@ -48,6 +56,52 @@ function ispravanMail(mail)
 		return false;
 	
 	return true;	
+}
+function provjeraSaServisom(){
+	if(mjesto == "" && opstina == "")
+	{
+		if(svaPoljaOsimMjestaIOpstineUredu == 1)
+		{
+			alert("Uspjesno ste poslali podatke");
+			return;
+		}
+		return;
+	}
+
+var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function() {// Anonimna funkcija
+                
+				if (ajax.readyState == 4 && ajax.status == 200)
+                {
+					var odgovor = ajax.responseText;
+					var nizOdgovora = odgovor.split('"');
+					
+						if(nizOdgovora[1] == "greska")
+						{
+							//postavi gresku
+							azurirajError("mjestoID", "erMjesto", "mjestoError", "left", "block", nizOdgovora[3]);
+						}
+						else
+						{
+							azurirajError("mjestoID", "erMjesto", "mjestoError", "none", "none", "");
+							if(svaPoljaOsimMjestaIOpstineUredu == 1)
+							{
+								alert("Uspjesno ste poslali podatke");
+							}
+						}
+				
+                }
+                if (ajax.readyState == 4 && ajax.status == 404)
+				{
+					//alert("Servis za provjeru mjesta i opstine nije ispravan");
+					if(svaPoljaOsimMjestaIOpstineUredu == 1)
+					{
+						alert("Uspjesno ste poslali podatke");
+					}
+				}
+        }
+        ajax.open("GET", "http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina=" + opstina + "&mjesto=" + mjesto, true);
+        ajax.send();
 }
 function provjeriTelefon(){
 	var cssf="none", prikazi="none", poruka="", ok=true;

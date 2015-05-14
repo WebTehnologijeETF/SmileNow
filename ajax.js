@@ -37,7 +37,7 @@ function ucitajStranicu(link){
 			}, false);
 
 			document.getElementById("naslovna").addEventListener( "click", function(ev) { 
-			ucitajStranicu("naslovna.html"); 
+			ucitajStranicu("naslovna.php"); 
 			}, false);
 
 			document.getElementById("kontakt").addEventListener( "click", function(ev) { 
@@ -45,5 +45,5 @@ function ucitajStranicu(link){
 			}, false);
 
 			window.onload = function () {
-			ucitajStranicu("naslovna.html");
+			ucitajStranicu("naslovna.php");
 			}
