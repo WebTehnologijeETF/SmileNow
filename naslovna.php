@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Naslovna</title>
 </head>
 	<body>
+	
+	<div id="naslovna">
+		<h2 class="welcome"> Dobrodošli na web stranicu stomatološke ordinacije SmileNoW! </h2><hr>
+	</div>
+	
+	
 	<?php 
 	
 	
@@ -75,77 +82,24 @@
 			}
 	   }
 	}
-	
+	echo '<div id="objave">';
 	for ($i=0; $i<count($novosti); $i++) {
-		
-	echo '<br/><br/><br/><br/>';
-	print_r($novosti[$sortirano_po_datumu[$i]]);
-	print_r("detaljnije<br/><br/>");
-	print_r($detaljnije_novost[$sortirano_po_datumu[$i]]);
-	
+		//operator . spaja stringove
+		//pokusaj sa strigom
+		$ispis = '<div class="objava"><h2>' . $naslovi_novosti[$sortirano_po_datumu[$i]] . '</h2>';
+		$ispis .= '<img src="' . $linkovi_slika[$sortirano_po_datumu[$i]] . '" alt="Nema slike">';
+		$ispis .= '<p class="objavio">' . $autori_novosti[$sortirano_po_datumu[$i]] . '</p>';
+		$ispis .= '<p class="date">' . $sortirani_datumi[$i] . '</p><br><br>';
+		$ispis .= '<p class="text_objave">' . $novosti[$sortirano_po_datumu[$i]] . '</p>';
+		$ispis .= '<a href="">Detaljnije...</a><br><hr></div>';
+		$ispis .= "<br/>";
+		$str = utf8_decode($ispis);
+		echo $str;
 	}
 	
+	echo '</div>';
 	
 	?> 
 	
-	
-	
-	
-	
-	
-	
-	
-			<div id="naslovna">
-			<h2 class="welcome"> Dobrodošli na web stranicu stomatološke ordinacije SmileNoW! </h2><hr>
-			</div>
-			
-			<div id="objave">
-			<div class="objava">
-				<h2>Ordinacija neće raditi 31.3.2015</h2>
-				<img src="slika.png" alt="Slika smile">
-				<p class="objavio">Ime Prezime</p>
-				<p class="date">29.3.2015</p><br><br>
-				<p class="text_objave">Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave 
-				Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave 
-				</p>
-				<a href="">Detaljnije...</a><br><hr>
-			</div>
-			<div class="objava">
-				<h2>Ordinacija neće raditi 31.3.2015</h2>
-				<img src="slika.png" alt="Slika smile">
-				<p class="objavio">Ime Prezime</p>
-				<p class="date">29.3.2015</p><br><br>
-				<p class="text_objave">Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave 
-				Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave 
-				</p>
-				<a href="">Detaljnije...</a><br><hr>
-			</div><div class="objava">
-				<h2>Ordinacija neće raditi 31.3.2015</h2>
-				<img src="slika.png" alt="Slika smile">
-				<p class="objavio">Ime Prezime</p>
-				<p class="date">29.3.2015</p><br><br>
-				<p class="text_objave">Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave 
-				Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave 
-				</p>
-				<a href="">Detaljnije...</a><br><hr>
-			</div><div class="objava">
-				<h2>Ordinacija neće raditi 31.3.2015</h2>
-				<img src="slika.png" alt="Slika smile">
-				<p class="objavio">Ime Prezime</p>
-				<p class="date">29.3.2015</p><br><br>
-				<p class="text_objave">Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave 
-				Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst objave Tekst 
-				objave Tekst objave Tekst objave 
-				</p>
-				<a href="">Detaljnije...</a><br><hr>
-			</div>
-			</div>
 	</body>
 </html>
