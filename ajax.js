@@ -1,5 +1,4 @@
 function ucitajStranicu(link){
-			//alert("dsdsd");
 			var ajax = new XMLHttpRequest();
 			ajax.onreadystatechange = function() {// Anonimna funkcija
 					if (ajax.readyState == 4 && ajax.status == 200)
@@ -37,7 +36,7 @@ function ucitajStranicu(link){
 			}, false);
 
 			document.getElementById("naslovna").addEventListener( "click", function(ev) { 
-			ucitajStranicu("naslovna.php"); 
+			ucitajStranicu("index.html"); 
 			}, false);
 
 			document.getElementById("kontakt").addEventListener( "click", function(ev) { 
@@ -45,5 +44,5 @@ function ucitajStranicu(link){
 			}, false);
 
 			window.onload = function () {
-			ucitajStranicu("naslovna.php");
+			ucitajStranicu("index.html");
 			}

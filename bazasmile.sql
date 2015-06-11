@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2015 at 03:15 AM
+-- Generation Time: Jun 11, 2015 at 11:30 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -32,10 +32,10 @@ CREATE TABLE IF NOT EXISTS `komentari` (
   `autor` varchar(50) COLLATE utf16_slovenian_ci NOT NULL,
   `emailautora` varchar(30) COLLATE utf16_slovenian_ci NOT NULL,
   `tekst` text COLLATE utf16_slovenian_ci NOT NULL,
-  `vrijeme` timestamp NOT NULL,
+  `vrijeme` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `idnovosti` (`idnovosti`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_slovenian_ci AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_slovenian_ci AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `komentari`
@@ -56,9 +56,9 @@ CREATE TABLE IF NOT EXISTS `novosti` (
   `autor` varchar(30) COLLATE utf16_slovenian_ci NOT NULL,
   `tekst` text COLLATE utf16_slovenian_ci NOT NULL,
   `brojkomentara` int(11) NOT NULL DEFAULT '0',
-  `vrijeme` timestamp NOT NULL,
+  `vrijeme` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_slovenian_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_slovenian_ci AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `novosti`
@@ -66,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `novosti` (
 
 INSERT INTO `novosti` (`id`, `naslov`, `autor`, `tekst`, `brojkomentara`, `vrijeme`) VALUES
 (1, 'Prva novost', 'Benjamin', 'Ovo je prva novost u tabeli novosti.', 1, '2015-05-28 14:20:04'),
-(2, 'Ovo je neka novost', 'Autor Autorovic', 'Eh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novosti', 2, '2015-05-28 23:35:04'),
-(3, 'Novost dana', 'Neki Autor', 'tekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novosti', 4, '2015-05-28 23:35:49');
+(2, 'Ovo je neka novost', 'Autor Autorovic', 'Eh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novosti', 0, '2015-05-28 23:35:04'),
+(3, 'Novost sedmice', 'Neki Autor', 'tekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novosti', 5, '2015-05-28 23:35:49');
 
 --
 -- Constraints for dumped tables
