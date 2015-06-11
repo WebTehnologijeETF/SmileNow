@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `novosti` (
 INSERT INTO `novosti` (`id`, `naslov`, `autor`, `tekst`, `brojkomentara`, `vrijeme`) VALUES
 (1, 'Prva novost', 'Benjamin', 'Ovo je prva novost u tabeli novosti.', 1, '2015-05-28 14:20:04'),
 (2, 'Ovo je neka novost', 'Autor Autorovic', 'Eh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novostiEh sada ovdje ide tekst novosti', 0, '2015-05-28 23:35:04'),
-(3, 'Novost sedmice', 'Neki Autor', 'tekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novosti', 5, '2015-05-28 23:35:49');
+(3, 'Novost sedmice', 'Neki Autor', 'tekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novostitekst novosti', 0, '2015-05-28 23:35:49');
 
 --
 -- Constraints for dumped tables
